@@ -8,9 +8,9 @@ This guide walks you through pushing the project to GitHub and deploying to Verc
 
 - **GitHub Repository:** https://github.com/cqdesignsny/Marlon-Ramos_Photo
 - **Branch/Sync:** `main` is in sync with `origin/main` (0 ahead / 0 behind)
-- **Current verified commit:** `c313d41fdac759e7eb27e120ae2e17a1b4ea7875`
+- **Current verified commit:** See `git rev-parse HEAD` on local clone
 - **Live deployment:** https://marlon-ramos-photo.vercel.app
-- **Deployment behavior:** Root path (`/`) loads correctly; direct deep links such as `/about` and `/portfolio/olivia-dillon` currently return `404` until SPA rewrites are configured
+- **Routing configuration:** SPA rewrites are configured via `vercel.json` for direct URL/deep-link support
 
 ---
 
@@ -257,8 +257,7 @@ Once connected to GitHub, every push to `main` will auto-deploy:
 **Problem:** Direct URLs like `/portfolio/olivia-dillon` show 404
 
 **Solution:**
-- This project currently needs explicit SPA rewrites on Vercel.
-- Create `vercel.json` in the project root:
+- Ensure `vercel.json` exists in the project root with SPA rewrite rules:
   ```json
   {
     "rewrites": [
@@ -266,7 +265,7 @@ Once connected to GitHub, every push to `main` will auto-deploy:
     ]
   }
   ```
-- Commit and push the file, then redeploy.
+- Commit and push changes to trigger a Vercel redeploy.
 
 ---
 
@@ -349,5 +348,5 @@ npm run preview
 
 ---
 
-**Last Updated:** February 11, 2026
+**Last Updated:** February 11, 2026 (includes SPA rewrite config)
 **Prepared by:** CQ Marketing

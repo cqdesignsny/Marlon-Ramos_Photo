@@ -13,10 +13,10 @@ A modern, high-end wedding photography portfolio website for Marlon Ramos Photog
 ## ✅ Current Verified Status (Feb 11, 2026)
 
 - **GitHub sync:** Local `main` = `origin/main` (0 ahead / 0 behind)
-- **Current commit:** `c313d41fdac759e7eb27e120ae2e17a1b4ea7875`
+- **Current commit:** See `git rev-parse HEAD` on local clone
 - **Vercel status:** Live and auto-deploying from GitHub
 - **Deployed build assets:** `index-Cmy_zViV.js`, `index-a_ywND5d.css`
-- **Known production behavior:** Direct URL refresh/deep links (for example `/about`, `/portfolio/olivia-dillon`) currently return `404` on Vercel because SPA rewrites are not configured yet
+- **Routing status:** SPA rewrites are configured via `vercel.json` so direct URL refresh/deep links resolve correctly after deployment
 
 ---
 
@@ -548,7 +548,7 @@ Each page uses the `SEOHead` component. Update in individual page files:
 - [x] Deploy to Vercel production
 - [ ] Configure custom domain (marlonramosphotography.com)
 - [x] Set up SSL certificate (managed by Vercel)
-- [ ] Configure SPA rewrites for direct URL routes (`/about`, `/portfolio/:slug`, etc.)
+- [x] Configure SPA rewrites for direct URL routes (`/about`, `/portfolio/:slug`, etc.)
 - [ ] Configure redirects from old WordPress URLs
 - [ ] Update Google Business Profile with new site URL
 
@@ -561,7 +561,6 @@ Each page uses the `SEOHead` component. Update in individual page files:
 - Mobile menu accessibility needs keyboard navigation improvements
 - Image optimization not yet implemented
 - Contact form needs proper HoneyBook integration
-- Direct URL/deep-link refresh returns 404 on Vercel until SPA rewrites are added
 
 ---
 
@@ -604,4 +603,4 @@ This project is proprietary and confidential. All rights reserved by Marlon Ramo
 
 ---
 
-**Last Updated:** February 11, 2026 (verified against GitHub + Vercel)
+**Last Updated:** February 11, 2026 (verified against GitHub + Vercel, SPA rewrites added)
