@@ -11,6 +11,7 @@ This guide walks you through pushing the project to GitHub and deploying to Verc
 - **Current verified commit:** See `git rev-parse HEAD` on local clone
 - **Live deployment:** https://marlon-ramos-photo.vercel.app
 - **Routing configuration:** SPA rewrites are configured via `vercel.json` for direct URL/deep-link support
+- **UI stability update:** Custom cursor tracker is bounded and spring-tuned to prevent off-screen snap behavior
 
 ---
 
@@ -168,6 +169,7 @@ Visit your deployment URL and test:
 - [ ] Individual story pages load (`/portfolio/:slug`)
 - [ ] All service pages load
 - [ ] Mobile menu works on smaller screens
+- [ ] Custom cursor follows pointer smoothly on desktop without edge snapping
 - [ ] Images load from marlonramosphotography.com URLs
 - [ ] Smooth page transitions work
 
@@ -348,5 +350,5 @@ npm run preview
 
 ---
 
-**Last Updated:** February 11, 2026 (includes SPA rewrite config)
+**Last Updated:** February 11, 2026 (includes SPA rewrites + custom cursor stability hotfix)
 **Prepared by:** CQ Marketing

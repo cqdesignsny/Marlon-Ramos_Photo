@@ -15,8 +15,9 @@ A modern, high-end wedding photography portfolio website for Marlon Ramos Photog
 - **GitHub sync:** Local `main` = `origin/main` (0 ahead / 0 behind)
 - **Current commit:** See `git rev-parse HEAD` on local clone
 - **Vercel status:** Live and auto-deploying from GitHub
-- **Deployed build assets:** `index-Cmy_zViV.js`, `index-a_ywND5d.css`
+- **Deployed assets:** Auto-generated per build (verify current hashes in live page source)
 - **Routing status:** SPA rewrites are configured via `vercel.json` so direct URL refresh/deep links resolve correctly after deployment
+- **Cursor status:** Custom mouse tracker uses bounded motion + tuned springs to prevent off-screen snapping
 
 ---
 
@@ -492,11 +493,11 @@ Each page uses the `SEOHead` component. Update in individual page files:
 - ✅ Fixed issue where clicking featured stories loaded mid-page
 - ✅ Applies to all navigation: nav links, footer links, portfolio items
 
-**Fixed Custom Cursor Animation:**
-- ✅ Eliminated shaky/jittery mouse tracking
-- ✅ Smoothed spring animation (reduced stiffness and adjusted damping)
-- ✅ Added mass parameter for more natural physics
-- ✅ Cursor now follows mouse smoothly without erratic movement
+**Custom Cursor Stability Hotfix:**
+- ✅ Switched tracker movement to Framer Motion values/springs to reduce render jitter
+- ✅ Added viewport clamping so cursor target stays in bounds near screen edges
+- ✅ Added window leave/blur handling so cursor hides cleanly instead of snapping
+- ✅ Retuned spring physics to remove overshoot and rebound artifacts
 
 **Footer Improvements:**
 - ✅ Logo and tagline now centered on mobile
@@ -603,4 +604,4 @@ This project is proprietary and confidential. All rights reserved by Marlon Ramo
 
 ---
 
-**Last Updated:** February 11, 2026 (verified against GitHub + Vercel, SPA rewrites added)
+**Last Updated:** February 11, 2026 (verified against GitHub + Vercel, SPA rewrites + cursor stability hotfix)
