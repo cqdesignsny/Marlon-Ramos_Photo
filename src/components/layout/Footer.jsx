@@ -8,15 +8,15 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
 
                     {/* Column 1: Brand */}
-                    <div className="space-y-6">
-                        <Link to="/">
+                    <div className="space-y-6 flex flex-col items-center md:items-center">
+                        <Link to="/" className="flex justify-center">
                             <img
                                 src="https://marlonramosphotography.com/wp-content/uploads/2021/10/Marlon-Ramos_logo_Main_logo.svg"
                                 alt="Marlon Ramos Photography"
-                                className="h-24 invert brightness-0"
+                                className="h-32 md:h-36 invert brightness-0"
                             />
                         </Link>
-                        <p className="text-sm tracking-widest uppercase font-heading text-accent-gold">
+                        <p className="text-sm tracking-widest uppercase font-heading text-accent-gold text-center">
                             Intimate moments. Timeless stories.
                         </p>
                     </div>

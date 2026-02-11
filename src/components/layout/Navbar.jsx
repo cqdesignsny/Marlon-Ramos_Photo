@@ -29,8 +29,12 @@ const Navbar = () => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = '';
         }
+
+        return () => {
+            document.body.style.overflow = '';
+        };
     }, [isOpen]);
 
     return (
@@ -57,8 +61,7 @@ const Navbar = () => {
                             onMouseLeave={() => setServicesOpen(false)}
                         >
                             <button
-                                className={`text-sm uppercase tracking-widest hover:text-accent-gold transition-colors flex items-center ${(scrolled || location.pathname !== '/') ? 'text-white' : 'text-white'
-                                    }`}
+                                className="text-sm uppercase tracking-widest hover:text-accent-gold transition-colors flex items-center text-white"
                             >
                                 Services
                             </button>
