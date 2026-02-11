@@ -4,6 +4,16 @@ This guide walks you through pushing the project to GitHub and deploying to Verc
 
 ---
 
+## ✅ Current Verified Status (Feb 11, 2026)
+
+- **GitHub Repository:** https://github.com/cqdesignsny/Marlon-Ramos_Photo
+- **Branch/Sync:** `main` is in sync with `origin/main` (0 ahead / 0 behind)
+- **Current verified commit:** `c313d41fdac759e7eb27e120ae2e17a1b4ea7875`
+- **Live deployment:** https://marlon-ramos-photo.vercel.app
+- **Deployment behavior:** Root path (`/`) loads correctly; direct deep links such as `/about` and `/portfolio/olivia-dillon` currently return `404` until SPA rewrites are configured
+
+---
+
 ## Step 1: Push to GitHub
 
 ### Prerequisites
@@ -101,6 +111,7 @@ This guide walks you through pushing the project to GitHub and deploying to Verc
 5. **View your site:**
    - Click the URL to see your live site
    - Share the link with Marlon for review
+   - Current production URL: `https://marlon-ramos-photo.vercel.app`
 
 ---
 
@@ -246,8 +257,8 @@ Once connected to GitHub, every push to `main` will auto-deploy:
 **Problem:** Direct URLs like `/portfolio/olivia-dillon` show 404
 
 **Solution:**
-- Vercel should handle this automatically for Vite
-- If needed, create `vercel.json`:
+- This project currently needs explicit SPA rewrites on Vercel.
+- Create `vercel.json` in the project root:
   ```json
   {
     "rewrites": [
@@ -255,6 +266,7 @@ Once connected to GitHub, every push to `main` will auto-deploy:
     ]
   }
   ```
+- Commit and push the file, then redeploy.
 
 ---
 
@@ -320,7 +332,7 @@ npm run preview
 
 - **GitHub Repo:** https://github.com/cqdesignsny/Marlon-Ramos_Photo
 - **Vercel Dashboard:** https://vercel.com/dashboard
-- **Live Site:** [Your Vercel URL after deployment]
+- **Live Site:** https://marlon-ramos-photo.vercel.app
 
 ---
 
