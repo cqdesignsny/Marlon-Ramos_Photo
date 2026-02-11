@@ -27,7 +27,25 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Temporarily disable smooth scrolling for instant navigation
+    const htmlElement = document.documentElement;
+    const originalScrollBehavior = htmlElement.style.scrollBehavior;
+    htmlElement.style.scrollBehavior = 'auto';
+
+    // Immediate scroll to top
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    // Restore smooth scrolling after a brief delay
+    const timeoutId = setTimeout(() => {
+      htmlElement.style.scrollBehavior = originalScrollBehavior;
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      htmlElement.style.scrollBehavior = originalScrollBehavior;
+    };
   }, [pathname]);
 
   return null;
