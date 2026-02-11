@@ -1,0 +1,90 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* New Palette */
+  --color-bg-primary: #F4EEEB;
+  /* Isabelline */
+  --color-bg-secondary: #EDE3D6;
+  /* Southern Sand */
+  --color-bg-dark: #292E1E;
+  /* Pine Tree */
+  --color-bg-card: #F4EEEB;
+  /* Isabelline */
+
+  --color-text-primary: #292E1E;
+  /* Pine Tree */
+  --color-text-secondary: #7A6B5E;
+  /* Vintage Coin */
+  --color-text-light: #F4EEEB;
+  /* Isabelline */
+
+  --color-accent-gold: #B3A696;
+  /* Taupe */
+  --color-accent-gold-hover: #7A6B5E;
+  /* Vintage Coin */
+
+  --color-border-light: #EDE3D6;
+  /* Southern Sand */
+
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-body: 'Inter', 'Plus Jakarta Sans', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+
+  --spacing-section: clamp(5rem, 12vw, 10rem);
+
+  --animate-fade-up: fadeUp 0.8s ease-out forwards;
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
