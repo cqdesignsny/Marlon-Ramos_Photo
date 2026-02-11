@@ -4,8 +4,9 @@ A modern, high-end wedding photography portfolio website for Marlon Ramos Photog
 
 ## 🌐 Live Site
 
-**Production:** [Coming Soon - Deploy to Vercel]
+**Production:** [https://marlon-ramos-photo.vercel.app](https://marlon-ramos-photo.vercel.app)
 **GitHub Repository:** [https://github.com/cqdesignsny/Marlon-Ramos_Photo](https://github.com/cqdesignsny/Marlon-Ramos_Photo)
+**Vercel Dashboard:** [https://vercel.com/dashboard](https://vercel.com/dashboard)
 
 ---
 
@@ -248,46 +249,113 @@ npm run lint     # Run ESLint
 
 ---
 
-## 🚀 Deployment to Vercel
+## 🔄 Working Across Multiple Machines
 
-### Method 1: Deploy via Vercel CLI
+This project is connected to GitHub and Vercel. Here's how to work on it from any machine:
 
-1. **Install Vercel CLI globally:**
+### First Time Setup on a New Machine
+
+1. **Clone the repository:**
    ```bash
-   npm install -g vercel
+   git clone https://github.com/cqdesignsny/Marlon-Ramos_Photo.git
+   cd Marlon-Ramos_Photo
    ```
 
-2. **Login to Vercel:**
+2. **Install dependencies:**
    ```bash
-   vercel login
+   npm install
    ```
 
-3. **Deploy:**
+3. **Start developing:**
    ```bash
-   vercel
+   npm run dev
    ```
 
-4. **Follow the prompts:**
-   - Link to existing project or create new
-   - Confirm project settings
-   - Deploy!
+### Daily Workflow
 
-5. **Deploy to production:**
-   ```bash
-   vercel --prod
-   ```
+**Before you start working:**
+```bash
+# Pull latest changes from GitHub
+git pull origin main
+```
 
-### Method 2: Deploy via Vercel Dashboard
+**After making changes:**
+```bash
+# Check what files changed
+git status
 
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click **"Add New Project"**
-3. Import from GitHub: `cqdesignsny/Marlon-Ramos_Photo`
-4. Configure project:
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-   - **Install Command:** `npm install`
-5. Click **Deploy**
+# Add your changes
+git add .
+
+# Commit with a descriptive message
+git commit -m "Description of what you changed"
+
+# Push to GitHub
+git push origin main
+```
+
+**What happens automatically:**
+- ✅ GitHub receives your changes
+- ✅ Vercel detects the push and starts building
+- ✅ 2-3 minutes later, your changes are live at https://marlon-ramos-photo.vercel.app
+- ✅ You'll get a deployment notification from Vercel
+
+### Working from Desktop/Laptop/Another Location
+
+**The workflow is exactly the same:**
+1. Clone the repo (first time only)
+2. `git pull` before starting work
+3. Make your changes
+4. `git add` → `git commit` → `git push`
+5. Vercel auto-deploys
+
+**Pro Tip:** Always `git pull` before starting work to avoid merge conflicts!
+
+---
+
+## 🚀 Deployment (Already Connected!)
+
+### Current Status: ✅ Live & Auto-Deploying
+
+**Live Site:** https://marlon-ramos-photo.vercel.app
+**Status:** Connected to GitHub and auto-deploying
+
+### How It Works Now
+
+This project is already connected to Vercel with **continuous deployment** enabled:
+
+1. **You push code to GitHub** → `git push origin main`
+2. **Vercel automatically detects the change**
+3. **Vercel builds the project** (runs `npm run build`)
+4. **Vercel deploys to production** (2-3 minutes total)
+5. **Your changes are live!**
+
+### Viewing Deployments
+
+- **Dashboard:** [https://vercel.com/dashboard](https://vercel.com/dashboard)
+- **See all deployments:** Click on your project → "Deployments" tab
+- **View logs:** Click on any deployment to see build logs
+
+### Manual Deploy (Only if needed)
+
+If you ever need to manually trigger a deploy:
+
+**Option 1: Via Vercel Dashboard**
+- Go to your project → Deployments → Click "Redeploy"
+
+**Option 2: Via Vercel CLI**
+```bash
+npm install -g vercel  # Install CLI (one-time)
+vercel login           # Login (one-time)
+vercel --prod          # Manual deploy
+```
+
+### No Action Needed!
+
+Since Vercel is connected to GitHub, you don't need to do anything special. Just:
+- Write code
+- Commit and push to GitHub
+- Vercel handles the rest automatically ✨
 
 ### Build Configuration
 
