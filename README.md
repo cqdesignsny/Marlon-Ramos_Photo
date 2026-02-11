@@ -472,6 +472,36 @@ Each page uses the `SEOHead` component. Update in individual page files:
 
 ---
 
+## 🔧 Recent Updates (Feb 11, 2026)
+
+### Bug Fixes & Improvements
+
+**Fixed Scroll-to-Top Behavior:**
+- ✅ All page navigations now start at the top of the page
+- ✅ Enhanced ScrollToTop component to override CSS smooth scrolling
+- ✅ Fixed issue where clicking featured stories loaded mid-page
+- ✅ Applies to all navigation: nav links, footer links, portfolio items
+
+**Fixed Custom Cursor Animation:**
+- ✅ Eliminated shaky/jittery mouse tracking
+- ✅ Smoothed spring animation (reduced stiffness and adjusted damping)
+- ✅ Added mass parameter for more natural physics
+- ✅ Cursor now follows mouse smoothly without erratic movement
+
+**Footer Improvements:**
+- ✅ Logo and tagline now centered on mobile
+- ✅ Logo and tagline centered in column on desktop
+- ✅ Increased logo size: h-24 → h-32 (mobile), h-36 (desktop)
+- ✅ Improved visual hierarchy and balance
+
+**Code Optimizations:**
+- ✅ Removed redundant conditional logic in Navbar
+- ✅ Improved useEffect cleanup for body scroll lock
+- ✅ Better memory management in navigation components
+- ✅ Cleaner, more maintainable code
+
+---
+
 ## 📋 Next Steps & Roadmap
 
 ### Content
